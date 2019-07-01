@@ -7,8 +7,6 @@ Created on Fri May 24 15:36:48 2019
 """
 
 #%%
-#from astropy import time, coordinates as coord, units as u
-import sys
 from astropy.time import Time
 from astropy import coordinates as coord, units as u
 from astropy.coordinates import EarthLocation
@@ -95,60 +93,10 @@ class Times:
                   parameters,(RA,DEC,*Location)''')
                         
         
-#%%
-'''
-x = Times()
-if len(sys.argv) >1:
-    if sys.argv[1]=='ut':
-        x.set_ut(sys.argv[2])
-        print(x.UT.jd)
-        
-    elif sys.argv[1]=='fits':
-        x.set_fits(sys.argv[2])
-        print(x.fits_to_jd())
-    
-    elif sys.argv[1]=='jd':
-        x.set_jd(sys.argv[2])
-        print(x.JD.isot)
-    
-    else:
-        print("""
-              Please check your inputs!
-              Usage: >>> python3 this_file.py ut/fits/jd date/fitsdate/JD
-              returns calendar date or JD based on your inputs
-              """)
-else:
-    print("""
-      Please check your inputs!
-      Usage: >>> python3 this_file.py ut/fits/jd date/fitsdate/JD
-      returns calendar date or JD based on your inputs
-      """)
-
-# =============================================================================
-# #%%
-# import time as zzz
-# for i in range(100):
-#     x.set_ut(Time.now())
-#     print(x.ut_to_jd())
-#     zzz.sleep(1)
-#     
-# =============================================================================
-'''
-#%%
-
-'VBT Jan4 targets' #Feige11 standard
-Objects = ['BD+40 5153','EC 02 200-2338','TYC 3315-1807-1',
-           'TYC 6474-188-1','ASAS 054354-0234.6',
-           'TYC1909-865-1','Feige11','HD 28736',
-           'TYC 5532-1333-1']
-RA = ['23h49m03.25s','02h22m19.83s','03h21m39.62s',
-      '05h09m56.78s','05h43m54.26s',
-      '07h16m46.90s','01h04m21.60s','04h32m04.80s',
-      '12h21m18.72s']
-DEC = ['41d19m26.30s','-23d24m55.93s','47d27m18.79s',
-       '-23d05m26.31s','-02d43m35.54s',
-       '23d19m30.00s','04d13m37.00s','+05d24m36.15s',
-       '-22d50m23.91s']
+Example:
+    '''
+RA = ['23h49m03.25s','02h22m19.83s','03h21m39.62s']
+DEC = ['41d19m26.30s','-23d24m55.93s','47d27m18.79s']
 
 #%%
 
@@ -161,10 +109,11 @@ elevation = 725*u.m
 
 x = Times()
 x.set_jd(2451373.377923)
-x.set_target(RA[2],DEC[2])
+x.set_target(RA[0],DEC[0])
 x.set_location(latitude,longitude,elevation)
 
 #%%
 
 print('JD  : {}, {}'.format(x.JD,x.JD.iso))
 print('BJD : {}, {}'.format(x.jd_to_bjd().value,x.BJD.iso))
+'''
