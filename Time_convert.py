@@ -19,14 +19,14 @@ class Times:
     def __init__(self,UT=None,FITS=None,JD=None,RA=None,DEC=None,
                  MJD=None,target=None,longitude=None,latitude=None,
                  elevation=None,location=None,BJD=None):
-        self.UT = UT
-        self.JD = JD
-        self.RA = RA
-        self.DEC= DEC
-        self.BJD = BJD
-        self.MJD = MJD
-        self.FITS = FITS
-        self.target = target
+        self.UT        = UT
+        self.JD        = JD
+        self.RA        = RA
+        self.DEC       = DEC
+        self.BJD       = BJD
+        self.MJD       = MJD
+        self.FITS      = FITS
+        self.target    = target
         self.longitude = longitude
         self.latitude  = latitude
         self.elevation = elevation
