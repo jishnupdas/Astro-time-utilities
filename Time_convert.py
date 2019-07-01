@@ -93,7 +93,7 @@ class Times:
                   parameters,(RA,DEC,*Location)''')
                         
         
-Example:
+#Example:
     '''
 RA = ['23h49m03.25s','02h22m19.83s','03h21m39.62s']
 DEC = ['41d19m26.30s','-23d24m55.93s','47d27m18.79s']
